@@ -22,24 +22,6 @@ stops += more_stops
 cleanlist = [word for word in blob.words if word not in stops]
 #print(cleanlist)
 
-'''
-Noun_words = []
-words_with_tag = nltk.pos_tag(without_stopwords)
-for word,pos in words_with_tag:
-    if(pos == 'NN' or pos == 'NNS' or pos=='NNP' or pos=='NNPS'):
-        Noun_words.append(word)
-wordcloud_dict ={}
-
-for word in Noun_words:
-    if word in wordcloud_dict.keys():
-        wordcloud_dict[word]+=1
-    else:
-        wordcloud_dict[word]=1
-
-sorted_dict = dict(sorted(wordcloud_dict.items(),key = operator.itemgetter(1),reverse=True))
-
-'''
-
 items = blob.word_counts.items()
 clean_items = [i for i in items if i[0] not in stops]
 #print(clean_items[:10])
